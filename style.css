@@ -190,3 +190,39 @@ body {
     padding-left: 20px;
     list-style-position: inside;
 }
+
+@media (max-width: 768px) {
+
+    .tab img {
+        width: 90%;
+    }
+
+    .projects img {
+        width: 100%;
+    }
+
+    .window {
+        width: 90%;
+    }
+
+    .icon img {
+        max-width: 70px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .icon {
+        position: static;
+    }
+
+    .desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 40px;
+    }
+
+}
