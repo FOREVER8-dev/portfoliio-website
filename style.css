@@ -193,7 +193,33 @@ body {
 
 @media (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
+    .desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+        padding-top: 40px;
+        height: auto;
+    }
+
+    .icon {
+        position: static;
+    }
+
+    .icon img {
+        max-width: 70px;
+    }
+
     .tab img {
+        width: 95%;
+    }
+
+    .window {
         width: 90%;
     }
 
@@ -201,28 +227,21 @@ body {
         width: 100%;
     }
 
-    .window {
-        width: 90%;
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .icon img {
-        max-width: 70px;
+    .contact-item img {
+        width: 60px;
     }
 
-}
-
-@media (max-width: 768px) {
-
-    .icon {
-        position: static;
+    .contact-item a {
+        font-size: 14px;
     }
 
-    .desktop {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding-top: 40px;
+    .tool-item img {
+        width: 70px;
     }
 
 }
