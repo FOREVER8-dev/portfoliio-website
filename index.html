@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop">
+        <button class="icon about" onclick="openWindow('about-window')">
+            <img src="images/FAboutMe.png">
+        </button>
+        <button class="icon tools" onclick="openWindow('tools-window')">
+            <img src="images/FTools.png">
+        </button>
+        <button class="icon projects" onclick="openWindow('projects-window')">
+            <img src="images/FProjects.png">
+        </button>
+        <button class="icon contacts" onclick="openWindow('contacts-window')">
+            <img src="images/FContacts.png">
+        </button>
+    </div>
+
+    <!-- About Window -->
+    <div id="about-window" class="window">
+        <div class="window-header">
+            <span>About Me - Notepad</span>
+            <button onclick="closeWindow('about-window')">X</button>
+        </div>
+        <div class="window-content">
+            <p>Hello! I'm Syahdu Zahara Dewo Putri, a fourth-semester student at Gunadarma University.
+                I'm interested in UI/UX design, Cybersecurity, Networking, and Game Development.
+                I enjoy exploring technology and building projects that help me grow both technically and creatively.</p>
+        </div>
+    </div>
+
+    <!-- Tools Window -->
+    <div id="tools-window" class="window">
+        <div class="window-header">
+            <span>Tools That I've Used - Notepad</span>
+            <button onclick="closeWindow('tools-window')">X</button>
+        </div>
+        <div class="window-content">
+            <p>Here's the tools that i've explore:</p>
+            <div class="tools-container">
+                <div class="tool-item">
+                    <img src="images/figma.png">
+                    <span>Figma</span>
+                </div>
+                <div class="tool-item">
+                    <img src="images/python.png">
+                    <span>Python</span>
+                </div>
+                <div class="tool-item">
+                    <img src="images/renpy.png">
+                    <span>Ren'Py</span>
+                </div>
+                <div class="tool-item">
+                    <img src="images/linux.png">
+                    <span>Linux</span>
+                </div>
+                <div class="tool-item">
+                    <img src="images/kali-linux.png">
+                    <span>Kali Linux</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Window (UDAH DI FIX + SCROLL) -->
+    <div id="projects-window" class="window">
+        <div class="window-header">
+            <span>Projects - Notepad</span>
+            <button onclick="closeWindow('projects-window')">X</button>
+        </div>
+        <div class="window-content">
+            <p>Here's the projects that i've been working on:</p>
+            <div class="projects-scroll">
+                <div class="projects">
+                    <ol type="1">
+                        <li>Networking project: Simple Networking Between University Buildings Simulation
+                            <img src="images/NetworkProject.png" alt="Network Project">
+                            <p>
+                                This project simulates inter-building network in a campus using Cisco Packet Tracer.
+                                Each building has its own subnet with different IP addresses.<br>
+                                <br><br>
+                                Building 1 (Informatics Engineering Laboratory):<br>
+                                a. Lab Assistant Room: 192.168.10.0/24<br>
+                                b. Lab Practice Room: 192.168.20.0/24<br>
+                                Building 5 (Academic Management System Service Center): 192.168.50.0/24<br>
+                                <br><br>
+                                Both buildings are connected using a main router through serial fastethernet connection.
+                                Uses basic VLAN and IP routing to separate network traffic between departments.
+                                This simulation helps understand how campus network is managed efficiently and securely.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+                <br><br>
+                <div class="projects">
+                    <ol start="2">
+                        <li>Writing website project: SamudraKata<br>
+                            <br>
+                            <img src="images/WritingWeb.png" alt="SamudraKata">
+                            <p>
+                                (You can check this website on: 
+                                <a href="https://samudrakata-production.up.railway.app" target="_blank">samudrakata-production.up.railway.app</a>)<br>
+                                <br><br>
+                                SamudraKata is a web-based storytelling platform where users can read, write, and share stories. Inspired by write.as and AO3.
+                                Built with Flask framework for the backend and MySQL database hosted on Aiven cloud.
+                                Features include:<br>
+                                <br><br>
+                                - User authentication (register/login)<br>
+                                - Story management (create, edit, delete, publish)<br>
+                                - Personal dashboard for writers<br>
+                                - Public pages to browse published stories<br>
+                                <br><br>
+                                Stories can be saved as draft or published for public viewing.
+                                Each story has a unique slug for easy sharing and SEO-friendly URLs.
+                                Deployed on Railway with database connection to Aiven MySQL cloud.
+                                This project demonstrates full-stack development skills.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacts Window -->
+    <div id="contacts-window" class="window">
+        <div class="window-header">
+            <span>Contacts - Notepad</span>
+            <button onclick="closeWindow('contacts-window')">X</button>
+        </div>
+        <div class="window-content">
+            <p>You can find me on:</p>
+            <div class="contact-item">
+                <img src="images/instagram.png" alt="Instagram">
+                <a href="https://www.instagram.com/syahduzahara?igsh=M2s4NjRucTN1MnBz" target="_blank">Instagram</a>
+            </div>
+            <div class="contact-item">
+                <img src="images/github.png" alt="Github">
+                <a href="https://github.com/FOREVER8-dev" target="_blank">Github</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab">
+        <img src="images/PaintTab.png">
+    </div>
+
+    <img src="images/BarNav.png" class="taskbar">
+
+    <script>
+        function openWindow(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function closeWindow(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
