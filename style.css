@@ -6,13 +6,13 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .desktop {
     position: relative;
     width: 100vw;
-    min-height: 100vh; /* FIX */
-    padding-bottom: 50px;
+    min-height: 100vh;
 }
 
 .icon {
